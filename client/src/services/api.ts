@@ -89,14 +89,12 @@ class DocumentService {
    * @param documentId - ID do documento
    * @param status - Novo status
    */
-  async updateDocumentStatus(documentId: number, status: 'APROVADO' | 'REJEITADO'): Promise<Document> {
-    try {
-      const response = await this.api.patch<Document>(`/documentos/${documentId}`, { status });
-      return response.data;
-    } catch (error: any) {
-      throw new Error(error.response?.data?.message || error.response?.data?.error || 'Erro ao atualizar status do documento');
-    }
+  async updateDocumentStatus(documentId: number, status: 'APROVADO' | 'REJEITADO') {
+  // Tente sem o /api no início se a baseURL já tiver /api
+  const response = await this.api.patch(`/documentos/${documentId}`, { status });
+  return response.data;
   }
+
 
   /**
    * Obtém a URL de preview de um documento
