@@ -335,9 +335,6 @@ export default function Home() {
           
           {/* Hero Section */}
           <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold mb-6 uppercase tracking-wider">
-              <Zap className="w-3 h-3" /> Nova Versão 2.0
-            </div>
             <h1 className="text-6xl font-black text-slate-900 tracking-tight mb-6">
               Documentos Digitais,   
 
@@ -363,7 +360,7 @@ export default function Home() {
               </CardHeader>
               <CardContent className="p-8 pt-0 space-y-4">
                 <Input
-                  placeholder="Seu ID de Matrícula"
+                  placeholder="Seu CPF "
                   value={tempUserId}
                   onChange={(e) => setTempUserId(e.target.value)}
                   className="h-14 bg-white/50 border-slate-200 focus:border-blue-500 focus:ring-blue-500 text-lg"
